@@ -35,6 +35,8 @@ async def on_message(message):
         )
     elif cmd.startswith('$nro'):
         await message.channel.send(str(random.randint(1, 10)))
+    elif cmd.startswith('$f1'):
+        await message.channel.send((random.choice(["Lando Norris", "Max Verstappen", "Lewis Hamilton", "Charles Leclerc", "Sergio Pérez", "Fernando Alonso", "George Russell", "Carlos Sainz", "Valtteri Bottas", "Esteban Ocon", "Andrea Kimi Antonelli", "Nico Hülkenberg", "Pierre Gasly", "Lance Stroll", "Alex Albon", "Oscar Piastri", "Franco Colapinto", "Gabriel Bortoleto", "Isack Hadjar", "Oliver Bearman", "Liam Lawson", "Arvid Lindblad"])))
     elif cmd.startswith('gen_pass'):
         if re.fullmatch(r'gen_pass\s*\(\s*(\d+)\s*\)', content):
             length = int(re.match(r'gen_pass\s*\(\s*(\d+)\s*\)', content).group(1))
